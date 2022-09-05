@@ -82,7 +82,7 @@ img {
 }
 
 body {
-    font-family: 'VT323', sans-serif;
+    font-family: 'Pixel Operator Mono', sans-serif;
     font-size: 4vmax;
     text-rendering: geometricPrecision;
 
@@ -99,7 +99,7 @@ body {
     display: flex;
     flex-flow: column nowrap;
     align-items: center;
-    justify-content: center;
+    justify-content: space-around;
 
     position: absolute;
     top: 0;
@@ -111,194 +111,31 @@ body {
     font-size: 1em;
 }
 
-.flexconttop {
-    font-size: 0.8em;
-    /* font-size: 6.5vh; */
+.spinnit {
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    animation: animatehue 5s linear infinite;
+}
 
-    display: flex;
+.spinnit img{
+    animation: spinache 5s linear infinite;
+    height: 40vh;
+}
+
+.counttext {
+    font-weight: bold;
+
     flex-flow: column wrap;
-    align-items: center;
-    align-content: space-between;
-
-    position: relative;
-    top: 2vh;
-    margin: 0 0 0.46em 0;
-}
-
-.flexcontmid {
-}
-
-.flexcontbot {
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: end;
-    align-items: end;
-
-    position: -webkit-sticky;
-    position: sticky;
-    top: 0;
-    bottom: 0.2em;
-    left: 0;
-    right: 2.35vmax;
-
-    font-size: 0.725em;
-
-    color: #ffffff;
-    mix-blend-mode: difference;
-}
-
-.flexcontbot a {
-    color: var(--linkfordark);
-}
-
-.randoms {
-    display: flex;
-    flex-flow: column;
-}
-
-.randomquote {
-    font-family: "Pixel Operator";
-    font-size: 0.5em;
-    font-weight: bold;
-
-    text-align-last: justify;
     text-align: center;
 }
 
-.randomaninsi {
-    text-align-last: justify;
-    text-align: center;
+.down *{
+    margin: 0;
 }
 
-.aninsilogo {
-    height: 25vmax;
+.down {
+    margin-bottom: 1em;
 }
-
-.midtext {
-    display: flex;
-    flex-flow: column nowrap;
-    width: 90%;
-    margin: auto;
-    margin-block-end: 1em;
-
-    font-family: "Press Start 2P", "Pixel Operator Mono", sans-serif;
-    font-weight: bold;
-
-    color: var(--dark);
-}
-
-.midtext p {
-    font-size: 0.5em;
-    text-align: justify;
-    hyphens: auto;
-    line-height: 1.5em;
-}
-
-.midtext h3 {
-    font-size: 0.75em;
-    font-weight: bold;
-    text-align: center;
-    text-align-last: justify;
-
-    color: #0000ff;
-}
-
-.pages {
-    display: flex;
-    flex-flow: row nowrap;
-    justify-content: space-around;
-}
-
-.pages p {
-    margin: 0 0.1em 0 0.1em;
-}
-
-.WTFQs {
-    display: flex;
-    flex-flow: row wrap;
-    position: relative;
-    justify-content: space-around;
-    align-content: space-between;
-
-    margin: auto;
-    padding: 1em;
-}
-
-.WTFQs * {
-    padding: 0.25em;
-
-    width: 7em;
-
-    image-rendering: auto;
-}
-
-.art {
-    display: flex;
-    flex-flow: row wrap;
-    position: relative;
-    justify-content: space-around;
-    align-content: space-between;
-
-    /* margin: auto; */
-    padding: 1em;
-}
-
-.art * {
-    padding: 0.25em;
-
-    height: 7em;
-    width: fit-content;
-
-    image-rendering: pixelated;
-}
-
-.ProJs {
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: space-around;
-
-    margin: 0 0.7em 0 0.7em;
-}
-
-.ProJs h3 {
-    font-family: "Pixel Operator";
-    font-weight: normal;
-
-    margin: 0 0.25em 0 0.25em;
-    /* margin: 0; */
-}
-
-.ProJs p {
-    font-size: 0.5em;
-}
-
-.subProJs {
-    text-align: center;
-}
-
-.marquee {
-    display: inline;
-    color: var(--dark);
-
-    max-width: fit-content;
-    margin: auto;
-
-    animation: marquee 2s linear infinite;
-}
-
-#time {
-    font-size: 0.3em;
-    /* font-family: "Pixel Operator"; */
-    font-family: "C64 Pro Mono";
-
-    margin: 0.4em;
-
-    position: absolute;
-}
-
-/* marquee {
-    height: 98vh;
-} */
 
 .hueanimation {
     animation: animatehue 5s linear infinite;
@@ -332,16 +169,6 @@ body {
     }
 }
 
-@keyframes marquee {
-    0% {
-        transform: translateX(100%);
-    }
-
-    100% {
-        transform: translateX(-100%);
-    }
-}
-
 @keyframes spinache {
     0% {
         transform: rotate3D(0,0,0,0deg)
@@ -358,15 +185,4 @@ body {
     100% {
         transform: rotate3D(0,0,0,360deg);
     }
-}
-
-.spinnit {
-    margin-bottom: 4rem;
-    animation: animatehue 5s linear infinite;
-}
-
-.spinnit > img {
-    animation: spinache 5s linear infinite;
-    height: 40vh;
-    image-rendering: pixelated;
 }

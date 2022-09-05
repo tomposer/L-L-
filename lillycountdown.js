@@ -2,6 +2,7 @@
 // Set the date we're counting down to
 var countDownDate = new Date("Jun 1, 2023 00:00:01").getTime();
 var countDownDate2 = new Date("Dec 18, 2022 00:00:01").getTime();
+const options = {weekday: 'long', year: 'numeric', month: '2-digit', day: '2-digit' };
 
 // Update the count down every 1 second
 function calc_count() {
@@ -28,7 +29,7 @@ function calc_count() {
     seconds = seconds.length == 1 ? 0 + seconds : seconds;
 
     // Display the result in the element with id="demo"
-    document.getElementById("lillyback").innerHTML = `${days}d ${hours}h ${minutes}m ${seconds}s (${new Date(countDownDate).toDateString()})`;
+    document.getElementById("lillyback").innerHTML = `${days}d ${hours}h ${minutes}m ${seconds}s (${new Date(countDownDate).toLocaleDateString('de-DE', options)})`;
 
     // If the count down is finished, write some text
     if (distance < 0) {
@@ -62,7 +63,7 @@ function calc_count2() {
     seconds = seconds.length == 1 ? 0 + seconds : seconds;
 
     // Display the result in the element with id="demo"
-    document.getElementById("lillyback2").innerHTML = `${days}d ${hours}h ${minutes}m ${seconds}s (${new Date(countDownDate2).toDateString()})`;
+    document.getElementById("lillyback2").innerHTML = `${days}d ${hours}h ${minutes}m ${seconds}s (${new Date(countDownDate2).toLocaleDateString('de-DE', options)})`;
 
     // If the count down is finished, write some text
     if (distance < 0) {
