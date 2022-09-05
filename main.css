@@ -1,0 +1,482 @@
+/* COPYRIGHT: MAXIMILIAN ARDALAN BERNHARD, KARLSRUHE 2022 */
+
+@font-face {
+    font-family: 'Press Start 2P';
+    src: local('Press Start 2P Regular'), local('PressStart2P-Regular'),
+        url('res/font/PressStart2P-Regular.woff2') format('woff2'),
+        url('res/font/PressStart2P-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'VT323';
+    src: local('VT323 Regular'), local('VT323-Regular'),
+        url('res/font/VT323-Regular.woff2') format('woff2'),
+        url('res/font/VT323-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Pixel Operator';
+    src: local('Pixel Operator'), local('PixelOperator'),
+        url('res/font/PixelOperator.woff2') format('woff2'),
+        url('res/font/PixelOperator.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Pixel Operator';
+    src: local('Pixel Operator Bold'), local('PixelOperator-Bold'),
+        url('res/font/PixelOperator-Bold.woff2') format('woff2'),
+        url('res/font/PixelOperator-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Pixel Operator Mono';
+    src: local('Pixel Operator Mono'), local('PixelOperatorMono'),
+        url('res/font/PixelOperatorMono.woff2') format('woff2'),
+        url('res/font/PixelOperatorMono.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Pixel Operator SC';
+    src: local('Pixel Operator SC Bold'), local('PixelOperatorSC-Bold'),
+        url('res/font/PixelOperatorSC-Bold.woff2') format('woff2'),
+        url('res/font/PixelOperatorSC-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Pixel Operator SC';
+    src: local('Pixel Operator SC'), local('PixelOperatorSC'),
+        url('res/font/PixelOperatorSC.woff2') format('woff2'),
+        url('res/font/PixelOperatorSC.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Pixel Operator Mono';
+    src: local('Pixel Operator Mono Bold'), local('PixelOperatorMono-Bold'),
+        url('res/font/PixelOperatorMono-Bold.woff2') format('woff2'),
+        url('res/font/PixelOperatorMono-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Pixel Operator Mono HB';
+    src: local('Pixel Operator Mono HB'), local('PixelOperatorMonoHB'),
+        url('res/font/PixelOperatorMonoHB.woff2') format('woff2'),
+        url('res/font/PixelOperatorMonoHB.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Pixel Operator HB';
+    src: local('Pixel Operator HB'), local('PixelOperatorHB'),
+        url('res/font/PixelOperatorHB.woff2') format('woff2'),
+        url('res/font/PixelOperatorHB.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Pixel Operator HB SC';
+    src: local('Pixel Operator HB SC'), local('PixelOperatorHBSC'),
+        url('res/font/PixelOperatorHBSC.woff2') format('woff2'),
+        url('res/font/PixelOperatorHBSC.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'creamfont';
+    src: local('creamfont Regular'), local('creamfont'),
+        url('creamfont.woff2') format('woff2'),
+        url('creamfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'C64 Pro';
+    src: local('C64 Pro'), local('C64Pro'),
+        url('C64Pro.woff2') format('woff2'),
+        url('C64Pro.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'C64 Pro Mono';
+    src: local('C64 Pro Mono'), local('C64ProMono'),
+        url('C64ProMono.woff2') format('woff2'),
+        url('C64ProMono.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+:root {
+    --centerwidth: calc(6vmax);
+    --centerheight: calc(6vmax);
+    --dark: #000719;
+    --bright: #fff8e6;
+    --linkforbright: #002fa5;
+    --linkfordark: #FFC941;
+}
+
+.light-theme {
+    --bg: var(--bright);
+    --fontColor: var(--dark);
+}
+
+/* .dark-theme {
+    --bg: var(--dark);
+    --fontColor: var(--bright);
+} */
+
+html {
+    height: 100%;
+}
+
+p {
+    margin-block-end: 0;
+    margin-block-start: 0;
+}
+
+a {
+    color: var(--linkforbright);
+}
+
+button {
+    background-color: var(--dark);
+    color: var(--linkfordark);
+
+    font-family: inherit;
+    font-size: inherit;
+
+    cursor: grab;
+}
+
+button:active {
+    cursor: grabbing;
+}
+
+img {
+    image-rendering: pixelated;
+    pointer-events: none;
+}
+
+body {
+    font-family: 'VT323', sans-serif;
+    font-size: 4vmax;
+    text-rendering: geometricPrecision;
+
+    color: var(--fontColor);
+    background-color: var(--bg);
+
+    height: 100%;
+    margin: 0 0 0 0;
+
+    user-select: none;
+}
+
+.flex {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    justify-content: center;
+
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+
+    font-size: 1em;
+}
+
+.flexconttop {
+    font-size: 0.8em;
+    /* font-size: 6.5vh; */
+
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    align-content: space-between;
+
+    position: relative;
+    top: 2vh;
+    margin: 0 0 0.46em 0;
+}
+
+.flexcontmid {
+}
+
+.flexcontbot {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: end;
+    align-items: end;
+
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    bottom: 0.2em;
+    left: 0;
+    right: 2.35vmax;
+
+    font-size: 0.725em;
+
+    color: #ffffff;
+    mix-blend-mode: difference;
+}
+
+.flexcontbot a {
+    color: var(--linkfordark);
+}
+
+.randoms {
+    display: flex;
+    flex-flow: column;
+}
+
+.randomquote {
+    font-family: "Pixel Operator";
+    font-size: 0.5em;
+    font-weight: bold;
+
+    text-align-last: justify;
+    text-align: center;
+}
+
+.randomaninsi {
+    text-align-last: justify;
+    text-align: center;
+}
+
+.aninsilogo {
+    height: 25vmax;
+}
+
+.midtext {
+    display: flex;
+    flex-flow: column nowrap;
+    width: 90%;
+    margin: auto;
+    margin-block-end: 1em;
+
+    font-family: "Press Start 2P", "Pixel Operator Mono", sans-serif;
+    font-weight: bold;
+
+    color: var(--dark);
+}
+
+.midtext p {
+    font-size: 0.5em;
+    text-align: justify;
+    hyphens: auto;
+    line-height: 1.5em;
+}
+
+.midtext h3 {
+    font-size: 0.75em;
+    font-weight: bold;
+    text-align: center;
+    text-align-last: justify;
+
+    color: #0000ff;
+}
+
+.pages {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-around;
+}
+
+.pages p {
+    margin: 0 0.1em 0 0.1em;
+}
+
+.WTFQs {
+    display: flex;
+    flex-flow: row wrap;
+    position: relative;
+    justify-content: space-around;
+    align-content: space-between;
+
+    margin: auto;
+    padding: 1em;
+}
+
+.WTFQs * {
+    padding: 0.25em;
+
+    width: 7em;
+
+    image-rendering: auto;
+}
+
+.art {
+    display: flex;
+    flex-flow: row wrap;
+    position: relative;
+    justify-content: space-around;
+    align-content: space-between;
+
+    /* margin: auto; */
+    padding: 1em;
+}
+
+.art * {
+    padding: 0.25em;
+
+    height: 7em;
+    width: fit-content;
+
+    image-rendering: pixelated;
+}
+
+.ProJs {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+
+    margin: 0 0.7em 0 0.7em;
+}
+
+.ProJs h3 {
+    font-family: "Pixel Operator";
+    font-weight: normal;
+
+    margin: 0 0.25em 0 0.25em;
+    /* margin: 0; */
+}
+
+.ProJs p {
+    font-size: 0.5em;
+}
+
+.subProJs {
+    text-align: center;
+}
+
+.marquee {
+    display: inline;
+    color: var(--dark);
+
+    max-width: fit-content;
+    margin: auto;
+
+    animation: marquee 2s linear infinite;
+}
+
+#time {
+    font-size: 0.3em;
+    /* font-family: "Pixel Operator"; */
+    font-family: "C64 Pro Mono";
+
+    margin: 0.4em;
+
+    position: absolute;
+}
+
+/* marquee {
+    height: 98vh;
+} */
+
+.hueanimation {
+    animation: animatehue 5s linear infinite;
+}
+
+.saturateanimation {
+    animation: animatesat 604800s linear infinite;
+}
+
+@keyframes animatehue {
+    0% {
+        filter: hue-rotate(0deg);
+    }
+
+    100% {
+        filter: hue-rotate(360deg);
+    }
+}
+
+@keyframes animatesat {
+    0% {
+        filter: saturate(100%);
+    }
+
+    50% {
+        filter: saturate(5000%);
+    }
+
+    100% {
+        filter: saturate(100%);
+    }
+}
+
+@keyframes marquee {
+    0% {
+        transform: translateX(100%);
+    }
+
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+@keyframes spinache {
+    0% {
+        transform: rotate3D(0,0,0,0deg)
+    }
+
+    33% {
+        transform: rotate3D(1,1,1,180deg);
+    }
+
+    66% {
+        transform: rotate3D(1,1,1,360deg);
+    }
+
+    100% {
+        transform: rotate3D(0,0,0,360deg);
+    }
+}
+
+.spinnit {
+    margin-bottom: 4rem;
+    animation: animatehue 5s linear infinite;
+}
+
+.spinnit > img {
+    animation: spinache 5s linear infinite;
+    height: 40vh;
+    image-rendering: pixelated;
+}
