@@ -112,7 +112,6 @@ function display_countdown() {
     countdown = setInterval('calc_count2()', refresh);
     countdown = setInterval('calc_count3()', refresh);
     var refresh = 250; // Refresh rate in milliseconds
-    console.log("Test")
 }
 
 display_countdown()
