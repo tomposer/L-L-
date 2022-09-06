@@ -3,9 +3,11 @@
 var countDownDate = new Date("Jun 1, 2023 00:00:00").getTime();
 var countDownDate2 = new Date("Dec 18, 2022 00:00:00").getTime();
 var countDownDate2_5 = new Date("Jan 6, 2023 00:00:00").getTime();
-
 var countDownDate3 = new Date("Sep 6, 2022 02:30:00").getTime();
-const options = {weekday: 'long', year: 'numeric', month: '2-digit', day: '2-digit' };
+const options = { weekday: 'long', year: 'numeric', month: '2-digit', day: '2-digit' };
+
+// var bodylight = document.getElementById("light-theme")
+// var bodydark = document.getElementById("dark-theme")
 
 // Update the count down every 1 second
 function calc_count() {
@@ -97,7 +99,7 @@ function calc_count3() {
     hours = Math.abs(hours).toString().length == 1 ? hours < 0 ? "-0" + Math.abs(hours).toString() : 0 + hours.toString() : hours.toString();
     minutes = Math.abs(minutes).toString().length == 1 ? minutes < 0 ? "-0" + Math.abs(minutes).toString() : 0 + minutes.toString() : minutes.toString();
     seconds = Math.abs(seconds).toString().length == 1 ? seconds < 0 ? "-0" + Math.abs(seconds).toString() : 0 + seconds.toString() : seconds.toString();
-    
+
     // Display the result in the element with id="demo"
     document.getElementById("lillygone").innerHTML = `${days}d ${hours}h ${minutes}m ${seconds}s (${new Date(countDownDate3).toLocaleDateString('de-DE', options)})`;
 
@@ -112,6 +114,19 @@ function display_countdown() {
     countdown = setInterval('calc_count2()', refresh);
     countdown = setInterval('calc_count3()', refresh);
     var refresh = 250; // Refresh rate in milliseconds
+}
+
+function changeTheme() {
+    var bodylight = document.getElementById("light-theme")
+    var bodydark = document.getElementById("dark-theme")
+    if (bodylight) {
+        console.log("uuuuu")
+        bodylight.id = "dark-theme"
+    }
+    else if (bodydark) {
+        console.log("oi")
+        bodydark.id = "light-theme"
+    }
 }
 
 display_countdown()

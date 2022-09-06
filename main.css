@@ -37,21 +37,38 @@
     --bright: #fff8e6;
     --linkforbright: #002fa5;
     --linkfordark: #FFC941;
+    --gonesincelight: #666666;
+    --gonesincedark: #999999;
 }
 
-.light-theme {
+#light-theme {
     --bg: var(--bright);
     --fontColor: var(--dark);
+    --gonesince: var(--gonesincelight)
 }
 
-/* .dark-theme {
+#dark-theme {
     --bg: var(--dark);
     --fontColor: var(--bright);
-} */
+    --gonesince: var(--gonesincedark)
+}
+
+.gonesince {
+    color: var(--gonesince)
+}
+
+.countdown {
+    color: #ea69ff;
+}
 
 img {
     image-rendering: pixelated;
     pointer-events: none;
+}
+
+button {
+    color: var(--fontColor);
+    background-color: var(--bg);
 }
 
 body {
@@ -89,9 +106,10 @@ body {
     animation: animatehue 5s linear infinite;
 }
 
-.spinnit img {
+.spinnit input {
     animation: spinache 5s linear infinite;
     height: 40vh;
+    cursor: default;
 }
 
 .counttext {
