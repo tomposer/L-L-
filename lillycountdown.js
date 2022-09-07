@@ -6,9 +6,6 @@ var countDownDate2_5 = new Date("Jan 6, 2023 00:00:00").getTime();
 var countDownDate3 = new Date("Sep 6, 2022 02:30:00").getTime();
 const options = { weekday: 'long', year: 'numeric', month: '2-digit', day: '2-digit' };
 
-// var bodylight = document.getElementById("light-theme")
-// var bodydark = document.getElementById("dark-theme")
-
 // Update the count down every 1 second
 function calc_count() {
 
@@ -116,17 +113,19 @@ function display_countdown() {
     var refresh = 250; // Refresh rate in milliseconds
 }
 
+display_countdown()
+
+
+
 function changeTheme() {
     var bodylight = document.getElementById("light-theme")
     var bodydark = document.getElementById("dark-theme")
+
     if (bodylight) {
-        console.log("uuuuu")
         bodylight.id = "dark-theme"
     }
-    else if (bodydark) {
-        console.log("oi")
+    else {
         bodydark.id = "light-theme"
     }
 }
 
-display_countdown()
