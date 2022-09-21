@@ -1,3 +1,5 @@
+var theme = document.getElementById("theme");
+
 // https://www.w3schools.com/howto/howto_js_countdown.asp
 // Set the date we're counting down to
 var countDownDate = new Date("Jun 1, 2023 00:00:00").getTime();
@@ -113,19 +115,39 @@ function display_countdown() {
     var refresh = 250; // Refresh rate in milliseconds
 }
 
-display_countdown()
 
 
+function loadTheme() {
+    var style = localStorage.getItem('style');
+    console.log(style);
+    if (!style) {
+        localStorage.setItem('style', "light-theme");
+        style = localStorage.getItem('style');
+    };
+    theme.id = style;
+}
 
 function changeTheme() {
-    var bodylight = document.getElementById("light-theme")
-    var bodydark = document.getElementById("dark-theme")
+    var lighttheme = document.getElementById("light-theme")
+    style = localStorage.getItem('style');
 
-    if (bodylight) {
-        bodylight.id = "dark-theme"
+
+    if (lighttheme) {
+        localStorage.setItem('style', "dark-theme");
+
+        style = localStorage.getItem('style');
+        theme.id = style;
     }
     else {
-        bodydark.id = "light-theme"
+        localStorage.setItem('style', "light-theme");
+
+        style = localStorage.getItem('style');
+        theme.id = style;
     }
 }
 
+
+
+
+display_countdown()
+loadTheme();
