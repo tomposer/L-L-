@@ -2,7 +2,7 @@ var theme = document.getElementById("theme");
 
 // https://www.w3schools.com/howto/howto_js_countdown.asp
 // Set the date we're counting down to
-var countDownDate = new Date("Jun 1, 2023 00:00:00").getTime();
+var countDownDate = new Date("Jun 6, 2023 00:00:00").getTime();
 var countDownDate2 = new Date("Dec 18, 2022 00:00:00").getTime();
 var countDownDate2_5 = new Date("Jan 6, 2023 00:00:00").getTime();
 var countDownDate3 = new Date("Sep 6, 2022 02:30:00").getTime();
